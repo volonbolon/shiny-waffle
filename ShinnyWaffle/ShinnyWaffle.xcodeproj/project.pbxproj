@@ -26,6 +26,8 @@
 		79F1FB9D24351E7100895AF6 /* ShinnyWaffle_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F1FB8D24351E7100895AF6 /* ShinnyWaffle_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79F1FBA024351E7100895AF6 /* ShinnyWaffle_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F1FB8B24351E7100895AF6 /* ShinnyWaffle_iOS.framework */; };
 		79F1FBA124351E7100895AF6 /* ShinnyWaffle_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79F1FB8B24351E7100895AF6 /* ShinnyWaffle_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79F1FBAA24351EAF00895AF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBA924351EAF00895AF6 /* MainViewController.swift */; };
+		79F1FBAD24351EFE00895AF6 /* MainRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBAC24351EFE00895AF6 /* MainRootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		79F1FB9324351E7100895AF6 /* ShinnyWaffle_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShinnyWaffle_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F1FB9A24351E7100895AF6 /* ShinnyWaffle_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShinnyWaffle_iOSTests.swift; sourceTree = "<group>"; };
 		79F1FB9C24351E7100895AF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79F1FBA924351EAF00895AF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		79F1FBAC24351EFE00895AF6 /* MainRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +265,8 @@
 		79F1FB8C24351E7100895AF6 /* ShinnyWaffle_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				79F1FBAB24351EDF00895AF6 /* User Interfaces */,
+				79F1FBA824351E9200895AF6 /* View Controllers */,
 				79F1FB8D24351E7100895AF6 /* ShinnyWaffle_iOS.h */,
 				79F1FB8E24351E7100895AF6 /* Info.plist */,
 			);
@@ -274,6 +280,22 @@
 				79F1FB9C24351E7100895AF6 /* Info.plist */,
 			);
 			path = ShinnyWaffle_iOSTests;
+			sourceTree = "<group>";
+		};
+		79F1FBA824351E9200895AF6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				79F1FBA924351EAF00895AF6 /* MainViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		79F1FBAB24351EDF00895AF6 /* User Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				79F1FBAC24351EFE00895AF6 /* MainRootView.swift */,
+			);
+			path = "User Interfaces";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,6 +459,7 @@
 					};
 					79F1FB8A24351E7100895AF6 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 					79F1FB9224351E7100895AF6 = {
 						CreatedOnToolsVersion = 11.4;
@@ -555,6 +578,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F1FBAA24351EAF00895AF6 /* MainViewController.swift in Sources */,
+				79F1FBAD24351EFE00895AF6 /* MainRootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,6 +947,7 @@
 		79F1FBA324351E7100895AF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -939,6 +965,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Volonbolon.ShinnyWaffle-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -949,6 +976,7 @@
 		79F1FBA424351E7100895AF6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
