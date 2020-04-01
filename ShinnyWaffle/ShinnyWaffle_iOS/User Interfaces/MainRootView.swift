@@ -11,6 +11,13 @@ import ShinnyWaffleUIKit
 
 public class MainRootView: NiblessView {
     private var hierarchyNotReady = true
+    let viewModel: MainViewModel
+
+    public init(viewModel: MainViewModel) {
+        self.viewModel = viewModel
+
+        super.init(frame: .zero)
+    }
 
     let button: UIButton = {
         let button = UIButton(type: .custom)
@@ -34,6 +41,10 @@ public class MainRootView: NiblessView {
         self.activateConstraints()
 
         self.backgroundColor = UIColor.white
+
+        self.button.addTarget(self.viewModel,
+                              action: .MainViewModelRetrieveRandomQuote,
+                              for: .touchUpInside)
 
         self.hierarchyNotReady = false
     }

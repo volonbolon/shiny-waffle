@@ -19,8 +19,10 @@ public struct AppDependencyContainer {
     }
 
     public func makeMainViewController() -> MainViewController {
-        let userInterface = MainRootView()
+        let mainViewModel = MainViewModel()
+        let userInterface = MainRootView(viewModel: mainViewModel)
         let mainViewController = MainViewController(userInterface: userInterface)
+        mainViewModel.uxResponder = mainViewController
 
         return mainViewController
     }

@@ -30,3 +30,9 @@ public class MainViewController: NiblessViewController {
         self.view = self.userInterface
     }
 }
+
+extension MainViewController: MainUXResponder {
+    func retrieveRandomQuote() {
+        fatalError("Not implemented yet")
+    }
+}

@@ -28,6 +28,8 @@
 		79F1FBAF24351FA500895AF6 /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBAE24351FA500895AF6 /* AppDependencyContainer.swift */; };
 		79F1FBB5243529D000895AF6 /* NiblessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBB4243529D000895AF6 /* NiblessNavigationController.swift */; };
 		79F1FBB724352A4600895AF6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBB624352A4600895AF6 /* RootViewController.swift */; };
+		79F1FBBA24352C4500895AF6 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBB924352C4500895AF6 /* MainViewModel.swift */; };
+		79F1FBBD24352C7200895AF6 /* MainUXResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBBC24352C7200895AF6 /* MainUXResponder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,8 @@
 		79F1FBAE24351FA500895AF6 /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
 		79F1FBB4243529D000895AF6 /* NiblessNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessNavigationController.swift; sourceTree = "<group>"; };
 		79F1FBB624352A4600895AF6 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		79F1FBB924352C4500895AF6 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		79F1FBBC24352C7200895AF6 /* MainUXResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUXResponder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +267,8 @@
 		79F1FB8C24351E7100895AF6 /* ShinnyWaffle_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				79F1FBBB24352C5C00895AF6 /* Responders */,
+				79F1FBB824352C0100895AF6 /* View Models */,
 				79F1FBAB24351EDF00895AF6 /* User Interfaces */,
 				79F1FBA824351E9200895AF6 /* View Controllers */,
 				79F1FB8D24351E7100895AF6 /* ShinnyWaffle_iOS.h */,
@@ -296,6 +302,22 @@
 				79F1FBAC24351EFE00895AF6 /* MainRootView.swift */,
 			);
 			path = "User Interfaces";
+			sourceTree = "<group>";
+		};
+		79F1FBB824352C0100895AF6 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				79F1FBB924352C4500895AF6 /* MainViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		79F1FBBB24352C5C00895AF6 /* Responders */ = {
+			isa = PBXGroup;
+			children = (
+				79F1FBBC24352C7200895AF6 /* MainUXResponder.swift */,
+			);
+			path = Responders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,7 +598,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F1FBBA24352C4500895AF6 /* MainViewModel.swift in Sources */,
 				79F1FBAA24351EAF00895AF6 /* MainViewController.swift in Sources */,
+				79F1FBBD24352C7200895AF6 /* MainUXResponder.swift in Sources */,
 				79F1FBAF24351FA500895AF6 /* AppDependencyContainer.swift in Sources */,
 				79F1FBB724352A4600895AF6 /* RootViewController.swift in Sources */,
 				79F1FBAD24351EFE00895AF6 /* MainRootView.swift in Sources */,
