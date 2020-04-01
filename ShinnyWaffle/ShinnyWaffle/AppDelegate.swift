@@ -28,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate { // MARK: - Helpers
     fileprivate func setupMainViewController() {
-        let mainViewController = injectionContainer.makeMainViewController()
-        self.setUpWindow(withRootViewController: mainViewController)
+        let rootViewController = injectionContainer.makeRootViewController()
+        self.setUpWindow(withRootViewController: rootViewController)
     }
 
     private func setUpWindow(withRootViewController rootViewController: UIViewController) {

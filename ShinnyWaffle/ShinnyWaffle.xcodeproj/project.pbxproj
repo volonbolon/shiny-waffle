@@ -27,6 +27,7 @@
 		79F1FBAD24351EFE00895AF6 /* MainRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBAC24351EFE00895AF6 /* MainRootView.swift */; };
 		79F1FBAF24351FA500895AF6 /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBAE24351FA500895AF6 /* AppDependencyContainer.swift */; };
 		79F1FBB5243529D000895AF6 /* NiblessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBB4243529D000895AF6 /* NiblessNavigationController.swift */; };
+		79F1FBB724352A4600895AF6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBB624352A4600895AF6 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		79F1FBAC24351EFE00895AF6 /* MainRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRootView.swift; sourceTree = "<group>"; };
 		79F1FBAE24351FA500895AF6 /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
 		79F1FBB4243529D000895AF6 /* NiblessNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessNavigationController.swift; sourceTree = "<group>"; };
+		79F1FBB624352A4600895AF6 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				79F1FBA924351EAF00895AF6 /* MainViewController.swift */,
+				79F1FBB624352A4600895AF6 /* RootViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 			files = (
 				79F1FBAA24351EAF00895AF6 /* MainViewController.swift in Sources */,
 				79F1FBAF24351FA500895AF6 /* AppDependencyContainer.swift in Sources */,
+				79F1FBB724352A4600895AF6 /* RootViewController.swift in Sources */,
 				79F1FBAD24351EFE00895AF6 /* MainRootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
