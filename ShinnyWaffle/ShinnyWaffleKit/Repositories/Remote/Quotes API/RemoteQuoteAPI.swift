@@ -8,12 +8,12 @@
 
 import Foundation
 
-enum RemoteQuoteError: Error {
+public enum RemoteQuoteError: Error {
     case connectionError
     case parsingError
 }
 
-typealias RemoteQuoteAPICompletionHandler = (Either<RemoteQuoteError, Quote>) -> Void
+public typealias QuoteRemoteAPICompletionHandler = (Either<RemoteQuoteError, Quote>) -> Void
 
 public protocol RemoteQuoteAPI {
     func getQuotes(completionHandler: QuoteRemoteAPICompletionHandler)

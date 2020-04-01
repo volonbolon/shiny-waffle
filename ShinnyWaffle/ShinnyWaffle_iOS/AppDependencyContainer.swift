@@ -12,6 +12,10 @@ import ShinnyWaffleKit
 public struct AppDependencyContainer {
     public init() {}
 
+    public func makeRemoteAPI() -> RemoteQuoteAPI {
+        return FakeRemoteQuoteAPI()
+    }
+
     public func makeRootViewController() -> RootViewController {
         let mainViewController = self.makeMainViewController()
         let rootViewController = RootViewController(mainViewController: mainViewController)
@@ -22,12 +26,25 @@ public struct AppDependencyContainer {
     public func makeMainViewController() -> MainViewController {
         let mainViewModel = MainViewModel()
         let userInterface = MainRootView(viewModel: mainViewModel)
-        let mainViewController = MainViewController(userInterface: userInterface, retrieveQuotesUseCaseFactory: self)
+        let quotesFactory = {
+            return self.makeQuotesViewController()
+        }
+        let mainViewController = MainViewController(userInterface: userInterface,
+                                                    retrieveQuotesUseCaseFactory: self,
+                                                    quotesViewControllerFactory: quotesFactory)
         mainViewModel.uxResponder = mainViewController
 
         return mainViewController
     }
+
+    public func makeQuotesViewController() -> QuotesViewController {
+        let userInterface = QuotesRootView(frame: .zero)
+        let viewController = QuotesViewController(userInterface: userInterface)
+
+        return viewController
+    }
 }
+
 extension AppDependencyContainer: RetrieveQuotesUseCaseFactory {
     public func makeMainUseCase() -> UseCase {
         let useCase = RetrieveQuotesUseCase()
