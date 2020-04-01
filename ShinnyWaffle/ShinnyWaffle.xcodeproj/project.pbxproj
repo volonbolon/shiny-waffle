@@ -14,6 +14,11 @@
 		79F1FAF724351C0700895AF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F1FAF624351C0700895AF6 /* Assets.xcassets */; };
 		79F1FAFA24351C0700895AF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F1FAF824351C0700895AF6 /* LaunchScreen.storyboard */; };
 		79F1FB0524351C0800895AF6 /* ShinnyWaffleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FB0424351C0800895AF6 /* ShinnyWaffleTests.swift */; };
+		79F1FB6B24351DF900895AF6 /* ShinnyWaffleUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F1FB6224351DF900895AF6 /* ShinnyWaffleUIKit.framework */; };
+		79F1FB7224351DF900895AF6 /* ShinnyWaffleUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FB7124351DF900895AF6 /* ShinnyWaffleUIKitTests.swift */; };
+		79F1FB7424351DF900895AF6 /* ShinnyWaffleUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F1FB6424351DF900895AF6 /* ShinnyWaffleUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79F1FB7724351DF900895AF6 /* ShinnyWaffleUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F1FB6224351DF900895AF6 /* ShinnyWaffleUIKit.framework */; };
+		79F1FB7824351DF900895AF6 /* ShinnyWaffleUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79F1FB6224351DF900895AF6 /* ShinnyWaffleUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +29,42 @@
 			remoteGlobalIDString = 79F1FAE924351C0600895AF6;
 			remoteInfo = ShinnyWaffle;
 		};
+		79F1FB6C24351DF900895AF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79F1FAE224351C0600895AF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79F1FB6124351DF900895AF6;
+			remoteInfo = ShinnyWaffleUIKit;
+		};
+		79F1FB6E24351DF900895AF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79F1FAE224351C0600895AF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79F1FAE924351C0600895AF6;
+			remoteInfo = ShinnyWaffle;
+		};
+		79F1FB7524351DF900895AF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79F1FAE224351C0600895AF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79F1FB6124351DF900895AF6;
+			remoteInfo = ShinnyWaffleUIKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		79F1FB7924351DF900895AF6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				79F1FB7824351DF900895AF6 /* ShinnyWaffleUIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		79F1FAEA24351C0600895AF6 /* ShinnyWaffle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinnyWaffle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +78,12 @@
 		79F1FB0024351C0800895AF6 /* ShinnyWaffleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShinnyWaffleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F1FB0424351C0800895AF6 /* ShinnyWaffleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShinnyWaffleTests.swift; sourceTree = "<group>"; };
 		79F1FB0624351C0800895AF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79F1FB6224351DF900895AF6 /* ShinnyWaffleUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShinnyWaffleUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F1FB6424351DF900895AF6 /* ShinnyWaffleUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShinnyWaffleUIKit.h; sourceTree = "<group>"; };
+		79F1FB6524351DF900895AF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79F1FB6A24351DF900895AF6 /* ShinnyWaffleUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShinnyWaffleUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F1FB7124351DF900895AF6 /* ShinnyWaffleUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShinnyWaffleUIKitTests.swift; sourceTree = "<group>"; };
+		79F1FB7324351DF900895AF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F1FB7724351DF900895AF6 /* ShinnyWaffleUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +102,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79F1FB5F24351DF900895AF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F1FB6724351DF900895AF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F1FB6B24351DF900895AF6 /* ShinnyWaffleUIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,7 +124,9 @@
 			isa = PBXGroup;
 			children = (
 				79F1FAEC24351C0600895AF6 /* ShinnyWaffle */,
+				79F1FB6324351DF900895AF6 /* ShinnyWaffleUIKit */,
 				79F1FB0324351C0800895AF6 /* ShinnyWaffleTests */,
+				79F1FB7024351DF900895AF6 /* ShinnyWaffleUIKitTests */,
 				79F1FAEB24351C0600895AF6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +136,8 @@
 			children = (
 				79F1FAEA24351C0600895AF6 /* ShinnyWaffle.app */,
 				79F1FB0024351C0800895AF6 /* ShinnyWaffleTests.xctest */,
+				79F1FB6224351DF900895AF6 /* ShinnyWaffleUIKit.framework */,
+				79F1FB6A24351DF900895AF6 /* ShinnyWaffleUIKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,7 +165,36 @@
 			path = ShinnyWaffleTests;
 			sourceTree = "<group>";
 		};
+		79F1FB6324351DF900895AF6 /* ShinnyWaffleUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				79F1FB6424351DF900895AF6 /* ShinnyWaffleUIKit.h */,
+				79F1FB6524351DF900895AF6 /* Info.plist */,
+			);
+			path = ShinnyWaffleUIKit;
+			sourceTree = "<group>";
+		};
+		79F1FB7024351DF900895AF6 /* ShinnyWaffleUIKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				79F1FB7124351DF900895AF6 /* ShinnyWaffleUIKitTests.swift */,
+				79F1FB7324351DF900895AF6 /* Info.plist */,
+			);
+			path = ShinnyWaffleUIKitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		79F1FB5D24351DF900895AF6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F1FB7424351DF900895AF6 /* ShinnyWaffleUIKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		79F1FAE924351C0600895AF6 /* ShinnyWaffle */ = {
@@ -109,10 +204,12 @@
 				79F1FAE624351C0600895AF6 /* Sources */,
 				79F1FAE724351C0600895AF6 /* Frameworks */,
 				79F1FAE824351C0600895AF6 /* Resources */,
+				79F1FB7924351DF900895AF6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				79F1FB7624351DF900895AF6 /* PBXTargetDependency */,
 			);
 			name = ShinnyWaffle;
 			productName = ShinnyWaffle;
@@ -137,6 +234,43 @@
 			productReference = 79F1FB0024351C0800895AF6 /* ShinnyWaffleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		79F1FB6124351DF900895AF6 /* ShinnyWaffleUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F1FB7E24351DF900895AF6 /* Build configuration list for PBXNativeTarget "ShinnyWaffleUIKit" */;
+			buildPhases = (
+				79F1FB5D24351DF900895AF6 /* Headers */,
+				79F1FB5E24351DF900895AF6 /* Sources */,
+				79F1FB5F24351DF900895AF6 /* Frameworks */,
+				79F1FB6024351DF900895AF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShinnyWaffleUIKit;
+			productName = ShinnyWaffleUIKit;
+			productReference = 79F1FB6224351DF900895AF6 /* ShinnyWaffleUIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		79F1FB6924351DF900895AF6 /* ShinnyWaffleUIKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F1FB7F24351DF900895AF6 /* Build configuration list for PBXNativeTarget "ShinnyWaffleUIKitTests" */;
+			buildPhases = (
+				79F1FB6624351DF900895AF6 /* Sources */,
+				79F1FB6724351DF900895AF6 /* Frameworks */,
+				79F1FB6824351DF900895AF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79F1FB6D24351DF900895AF6 /* PBXTargetDependency */,
+				79F1FB6F24351DF900895AF6 /* PBXTargetDependency */,
+			);
+			name = ShinnyWaffleUIKitTests;
+			productName = ShinnyWaffleUIKitTests;
+			productReference = 79F1FB6A24351DF900895AF6 /* ShinnyWaffleUIKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -151,6 +285,13 @@
 						CreatedOnToolsVersion = 11.4;
 					};
 					79F1FAFF24351C0800895AF6 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 79F1FAE924351C0600895AF6;
+					};
+					79F1FB6124351DF900895AF6 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					79F1FB6924351DF900895AF6 = {
 						CreatedOnToolsVersion = 11.4;
 						TestTargetID = 79F1FAE924351C0600895AF6;
 					};
@@ -171,6 +312,8 @@
 			targets = (
 				79F1FAE924351C0600895AF6 /* ShinnyWaffle */,
 				79F1FAFF24351C0800895AF6 /* ShinnyWaffleTests */,
+				79F1FB6124351DF900895AF6 /* ShinnyWaffleUIKit */,
+				79F1FB6924351DF900895AF6 /* ShinnyWaffleUIKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +330,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		79F1FAFE24351C0800895AF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F1FB6024351DF900895AF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F1FB6824351DF900895AF6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -214,6 +371,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79F1FB5E24351DF900895AF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F1FB6624351DF900895AF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F1FB7224351DF900895AF6 /* ShinnyWaffleUIKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -221,6 +393,21 @@
 			isa = PBXTargetDependency;
 			target = 79F1FAE924351C0600895AF6 /* ShinnyWaffle */;
 			targetProxy = 79F1FB0124351C0800895AF6 /* PBXContainerItemProxy */;
+		};
+		79F1FB6D24351DF900895AF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79F1FB6124351DF900895AF6 /* ShinnyWaffleUIKit */;
+			targetProxy = 79F1FB6C24351DF900895AF6 /* PBXContainerItemProxy */;
+		};
+		79F1FB6F24351DF900895AF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79F1FAE924351C0600895AF6 /* ShinnyWaffle */;
+			targetProxy = 79F1FB6E24351DF900895AF6 /* PBXContainerItemProxy */;
+		};
+		79F1FB7624351DF900895AF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79F1FB6124351DF900895AF6 /* ShinnyWaffleUIKit */;
+			targetProxy = 79F1FB7524351DF900895AF6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -438,6 +625,100 @@
 			};
 			name = Release;
 		};
+		79F1FB7A24351DF900895AF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8N376JP4MK;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ShinnyWaffleUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Volonbolon.ShinnyWaffleUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		79F1FB7B24351DF900895AF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8N376JP4MK;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ShinnyWaffleUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Volonbolon.ShinnyWaffleUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		79F1FB7C24351DF900895AF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8N376JP4MK;
+				INFOPLIST_FILE = ShinnyWaffleUIKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Volonbolon.ShinnyWaffleUIKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShinnyWaffle.app/ShinnyWaffle";
+			};
+			name = Debug;
+		};
+		79F1FB7D24351DF900895AF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8N376JP4MK;
+				INFOPLIST_FILE = ShinnyWaffleUIKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Volonbolon.ShinnyWaffleUIKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShinnyWaffle.app/ShinnyWaffle";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -464,6 +745,24 @@
 			buildConfigurations = (
 				79F1FB0D24351C0800895AF6 /* Debug */,
 				79F1FB0E24351C0800895AF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79F1FB7E24351DF900895AF6 /* Build configuration list for PBXNativeTarget "ShinnyWaffleUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F1FB7A24351DF900895AF6 /* Debug */,
+				79F1FB7B24351DF900895AF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79F1FB7F24351DF900895AF6 /* Build configuration list for PBXNativeTarget "ShinnyWaffleUIKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F1FB7C24351DF900895AF6 /* Debug */,
+				79F1FB7D24351DF900895AF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
