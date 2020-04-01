@@ -13,11 +13,14 @@ import ShinnyWaffleKit
 public class QuotesViewController: NiblessViewController {
     let userInterface: QuotesRootView
     let retrieveQuotesFactory: RetrieveQuotesUseCaseFactory
+    let observable: Observable<Quote?>
 
     public init(userInterface: QuotesRootView,
-                retrieveQuotesFactory: RetrieveQuotesUseCaseFactory) {
+                retrieveQuotesFactory: RetrieveQuotesUseCaseFactory,
+                observable: Observable<Quote?>) {
         self.userInterface = userInterface
         self.retrieveQuotesFactory = retrieveQuotesFactory
+        self.observable = observable
 
         super.init()
     }
@@ -31,7 +34,13 @@ public class QuotesViewController: NiblessViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        let useCase = self.retrieveQuotesFactory.makeRetrieveQuotesUseCase()
+        let useCase = self.retrieveQuotesFactory.makeRetrieveQuotesUseCase(observable: self.observable)
         useCase.start()
+    }
+}
+
+extension QuotesUXResponder {
+    func presentQuotes() {
+        
     }
 }

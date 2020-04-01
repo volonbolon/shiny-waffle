@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol QuotesUXResponder: class {
+    func presentQuotesInSafari()
+}

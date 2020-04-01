@@ -37,18 +37,24 @@ public struct AppDependencyContainer {
     }
 
     public func makeQuotesViewController() -> QuotesViewController {
-        let userInterface = QuotesRootView(frame: .zero)
+        let observable = Observable<Quote?>(nil)
+
+        let viewModel = QuotesViewModel(observableQuote: observable)
+        let userInterface = QuotesRootView(viewModel: viewModel)
+
         let viewController = QuotesViewController(userInterface: userInterface,
-                                                  retrieveQuotesFactory: self)
+                                                  retrieveQuotesFactory: self,
+                                                  observable: observable)
 
         return viewController
     }
 }
 
 extension AppDependencyContainer: RetrieveQuotesUseCaseFactory {
-    public func makeRetrieveQuotesUseCase() -> UseCase {
+    public func makeRetrieveQuotesUseCase(observable: Observable<Quote?>) -> UseCase {
         let remoteAPI = self.makeRemoteAPI()
-        let useCase = RetrieveQuotesUseCase(remoteAPI: remoteAPI)
+        let useCase = RetrieveQuotesUseCase(remoteAPI: remoteAPI,
+                                            observable: observable)
         return useCase
     }
 }

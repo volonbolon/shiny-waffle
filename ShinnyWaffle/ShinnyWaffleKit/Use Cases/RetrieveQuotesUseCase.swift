@@ -10,9 +10,11 @@ import Foundation
 
 public class RetrieveQuotesUseCase: UseCase {
     let remoteAPI: RemoteQuoteAPI
+    let observable: Observable<Quote?>
 
-    public init(remoteAPI: RemoteQuoteAPI) {
+    public init(remoteAPI: RemoteQuoteAPI, observable: Observable<Quote?>) {
         self.remoteAPI = remoteAPI
+        self.observable = observable
     }
     
     public func start() {
@@ -21,12 +23,12 @@ public class RetrieveQuotesUseCase: UseCase {
             case .Left(let error):
                 print(error)
             case .Right(let quote):
-                print(quote)
+                self.observable.value = quote
             }
         }
     }
 }
 
 public protocol RetrieveQuotesUseCaseFactory {
-    func makeRetrieveQuotesUseCase() -> UseCase
+    func makeRetrieveQuotesUseCase(observable: Observable<Quote?>) -> UseCase
 }

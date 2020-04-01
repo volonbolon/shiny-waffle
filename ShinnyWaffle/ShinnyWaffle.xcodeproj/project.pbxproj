@@ -46,6 +46,8 @@
 		79F1FBFB243541B500895AF6 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBFA243541B500895AF6 /* Target.swift */; };
 		79F1FBFD2435427E00895AF6 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBFC2435427E00895AF6 /* QuotesViewController.swift */; };
 		79F1FC01243545CB00895AF6 /* QuotesRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FC00243545CB00895AF6 /* QuotesRootView.swift */; };
+		79F1FC0324354F1000895AF6 /* QuotesUXResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FC0224354F1000895AF6 /* QuotesUXResponder.swift */; };
+		79F1FC0524354F7900895AF6 /* QuotestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FC0424354F7900895AF6 /* QuotestViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +186,8 @@
 		79F1FBFA243541B500895AF6 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		79F1FBFC2435427E00895AF6 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		79F1FC00243545CB00895AF6 /* QuotesRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesRootView.swift; sourceTree = "<group>"; };
+		79F1FC0224354F1000895AF6 /* QuotesUXResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesUXResponder.swift; sourceTree = "<group>"; };
+		79F1FC0424354F7900895AF6 /* QuotestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotestViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +379,7 @@
 		79F1FBAB24351EDF00895AF6 /* User Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				79F1FC00243545CB00895AF6 /* QuotesRootView.swift */,
 				79F1FBAC24351EFE00895AF6 /* MainRootView.swift */,
 			);
 			path = "User Interfaces";
@@ -384,7 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				79F1FBB924352C4500895AF6 /* MainViewModel.swift */,
-				79F1FC00243545CB00895AF6 /* QuotesRootView.swift */,
+				79F1FC0424354F7900895AF6 /* QuotestViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				79F1FBBC24352C7200895AF6 /* MainUXResponder.swift */,
+				79F1FC0224354F1000895AF6 /* QuotesUXResponder.swift */,
 			);
 			path = Responders;
 			sourceTree = "<group>";
@@ -831,9 +837,11 @@
 				79F1FBAA24351EAF00895AF6 /* MainViewController.swift in Sources */,
 				79F1FBBD24352C7200895AF6 /* MainUXResponder.swift in Sources */,
 				79F1FBAF24351FA500895AF6 /* AppDependencyContainer.swift in Sources */,
+				79F1FC0524354F7900895AF6 /* QuotestViewModel.swift in Sources */,
 				79F1FBB724352A4600895AF6 /* RootViewController.swift in Sources */,
 				79F1FBAD24351EFE00895AF6 /* MainRootView.swift in Sources */,
 				79F1FBFD2435427E00895AF6 /* QuotesViewController.swift in Sources */,
+				79F1FC0324354F1000895AF6 /* QuotesUXResponder.swift in Sources */,
 				79F1FC01243545CB00895AF6 /* QuotesRootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
