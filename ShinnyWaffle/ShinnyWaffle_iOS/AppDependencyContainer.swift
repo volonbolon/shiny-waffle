@@ -9,6 +9,7 @@
 import Foundation
 
 public struct AppDependencyContainer {
+    public init() {}
     public func makeMainViewController() -> MainViewController {
         let userInterface = MainRootView()
         let mainViewController = MainViewController(userInterface: userInterface)
