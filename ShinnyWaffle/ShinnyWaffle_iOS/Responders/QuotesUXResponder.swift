@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import ShinnyWaffleKit
 
 protocol QuotesUXResponder: class {
+    var observable: Observable<Quote?> { get }
     func presentQuotesInSafari()
 }

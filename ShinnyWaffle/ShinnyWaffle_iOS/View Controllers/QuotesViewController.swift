@@ -39,8 +39,10 @@ public class QuotesViewController: NiblessViewController {
     }
 }
 
-extension QuotesUXResponder {
-    func presentQuotes() {
-        
+extension QuotesViewController: QuotesUXResponder {
+    func presentQuotesInSafari() {
+        if let quote = self.observable.value {
+            UIApplication.shared.open(quote.URL, options: [:], completionHandler: nil)
+        }
     }
 }

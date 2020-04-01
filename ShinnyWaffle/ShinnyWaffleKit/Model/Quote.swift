@@ -9,9 +9,9 @@
 import Foundation
 
 public struct Quote: Equatable, Codable {
-    let text: String
-    let author: String
-    let URL: URL
+    public let text: String
+    public let author: String
+    public let URL: URL
 }
 
 extension Quote: CustomStringConvertible {

@@ -84,15 +84,11 @@ extension QuotesRootView { // MARK: - Helpers
     private func activateLabelConstraints() {
         let xConstraint = self.label.centerXAnchor.constraint(equalTo: layoutMarginsGuide.centerXAnchor)
         let yConstraint = self.label.centerYAnchor.constraint(equalTo: layoutMarginsGuide.centerYAnchor)
-        let leading = self.label.leadingAnchor.constraint(greaterThanOrEqualTo: layoutMarginsGuide.leadingAnchor,
-                                                          constant: 12)
-        let trailing = self.label.trailingAnchor.constraint(greaterThanOrEqualTo: layoutMarginsGuide.trailingAnchor,
-                                                            constant: 12)
+        let width = self.label.widthAnchor.constraint(equalToConstant: 300)
         let toActivate = [
             xConstraint,
             yConstraint,
-            leading,
-            trailing
+            width
         ]
         NSLayoutConstraint.activate(toActivate)
     }

@@ -46,6 +46,8 @@ public struct AppDependencyContainer {
                                                   retrieveQuotesFactory: self,
                                                   observable: observable)
 
+        viewModel.uxResponder = viewController
+
         return viewController
     }
 }
