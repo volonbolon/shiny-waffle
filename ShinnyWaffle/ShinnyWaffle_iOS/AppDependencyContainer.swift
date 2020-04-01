@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ShinnyWaffleKit
 
 public struct AppDependencyContainer {
     public init() {}
@@ -21,9 +22,15 @@ public struct AppDependencyContainer {
     public func makeMainViewController() -> MainViewController {
         let mainViewModel = MainViewModel()
         let userInterface = MainRootView(viewModel: mainViewModel)
-        let mainViewController = MainViewController(userInterface: userInterface)
+        let mainViewController = MainViewController(userInterface: userInterface, retrieveQuotesUseCaseFactory: self)
         mainViewModel.uxResponder = mainViewController
 
         return mainViewController
+    }
+}
+extension AppDependencyContainer: RetrieveQuotesUseCaseFactory {
+    public func makeMainUseCase() -> UseCase {
+        let useCase = RetrieveQuotesUseCase()
+        return useCase
     }
 }

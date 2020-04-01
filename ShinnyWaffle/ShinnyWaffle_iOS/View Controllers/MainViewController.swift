@@ -8,12 +8,16 @@
 
 import UIKit
 import ShinnyWaffleUIKit
+import ShinnyWaffleKit
 
 public class MainViewController: NiblessViewController {
     let userInterface: MainRootView
+    let retrieveQuotesUseCaseFactory: RetrieveQuotesUseCaseFactory
 
-    public init(userInterface: MainRootView) {
+    public init(userInterface: MainRootView,
+                retrieveQuotesUseCaseFactory: RetrieveQuotesUseCaseFactory) {
         self.userInterface = userInterface
+        self.retrieveQuotesUseCaseFactory = retrieveQuotesUseCaseFactory
 
         super.init()
     }
