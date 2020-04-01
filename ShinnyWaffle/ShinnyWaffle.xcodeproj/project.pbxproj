@@ -28,6 +28,7 @@
 		79F1FBA124351E7100895AF6 /* ShinnyWaffle_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79F1FB8B24351E7100895AF6 /* ShinnyWaffle_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79F1FBAA24351EAF00895AF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBA924351EAF00895AF6 /* MainViewController.swift */; };
 		79F1FBAD24351EFE00895AF6 /* MainRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBAC24351EFE00895AF6 /* MainRootView.swift */; };
+		79F1FBAF24351FA500895AF6 /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FBAE24351FA500895AF6 /* AppDependencyContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		79F1FB9C24351E7100895AF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79F1FBA924351EAF00895AF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		79F1FBAC24351EFE00895AF6 /* MainRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRootView.swift; sourceTree = "<group>"; };
+		79F1FBAE24351FA500895AF6 /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 				79F1FBA824351E9200895AF6 /* View Controllers */,
 				79F1FB8D24351E7100895AF6 /* ShinnyWaffle_iOS.h */,
 				79F1FB8E24351E7100895AF6 /* Info.plist */,
+				79F1FBAE24351FA500895AF6 /* AppDependencyContainer.swift */,
 			);
 			path = ShinnyWaffle_iOS;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F1FBAA24351EAF00895AF6 /* MainViewController.swift in Sources */,
+				79F1FBAF24351FA500895AF6 /* AppDependencyContainer.swift in Sources */,
 				79F1FBAD24351EFE00895AF6 /* MainRootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
