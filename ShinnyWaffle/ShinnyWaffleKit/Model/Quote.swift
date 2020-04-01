@@ -11,4 +11,11 @@ import Foundation
 public struct Quote: Equatable, Codable {
     let text: String
     let author: String
+    let URL: URL
+}
+
+extension Quote: CustomStringConvertible {
+    public var description: String {
+        return "\(self.text) - \(self.author)"
+    }
 }

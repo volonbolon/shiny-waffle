@@ -14,14 +14,11 @@ public typealias QuotesViewControllerFactory = () -> QuotesViewController
 
 public class MainViewController: NiblessViewController {
     let userInterface: MainRootView
-    let retrieveQuotesUseCaseFactory: RetrieveQuotesUseCaseFactory
     let quotesFactory: QuotesViewControllerFactory
 
     public init(userInterface: MainRootView,
-                retrieveQuotesUseCaseFactory: RetrieveQuotesUseCaseFactory,
                 quotesViewControllerFactory: @escaping QuotesViewControllerFactory) {
         self.userInterface = userInterface
-        self.retrieveQuotesUseCaseFactory = retrieveQuotesUseCaseFactory
         self.quotesFactory = quotesViewControllerFactory
 
         super.init()
@@ -41,7 +38,7 @@ public class MainViewController: NiblessViewController {
 }
 
 extension MainViewController: MainUXResponder {
-    func retrieveRandomQuote() {
+    func presentQuotes() {
         let viewController = self.quotesFactory()
 
         self.navigationController?.pushViewController(viewController, animated: true)

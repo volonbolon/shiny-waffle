@@ -9,13 +9,24 @@
 import Foundation
 
 public class RetrieveQuotesUseCase: UseCase {
-    public init() {}
+    let remoteAPI: RemoteQuoteAPI
+
+    public init(remoteAPI: RemoteQuoteAPI) {
+        self.remoteAPI = remoteAPI
+    }
     
     public func start() {
-        print("RetrieveQuotesUseCase")
+        self.remoteAPI.getQuotes { (result) in
+            switch result {
+            case .Left(let error):
+                print(error)
+            case .Right(let quote):
+                print(quote)
+            }
+        }
     }
 }
 
 public protocol RetrieveQuotesUseCaseFactory {
-    func makeMainUseCase() -> UseCase
+    func makeRetrieveQuotesUseCase() -> UseCase
 }

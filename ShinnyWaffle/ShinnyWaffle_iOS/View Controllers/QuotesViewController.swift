@@ -8,12 +8,16 @@
 
 import UIKit
 import ShinnyWaffleUIKit
+import ShinnyWaffleKit
 
 public class QuotesViewController: NiblessViewController {
     let userInterface: QuotesRootView
+    let retrieveQuotesFactory: RetrieveQuotesUseCaseFactory
 
-    public init(userInterface: QuotesRootView) {
+    public init(userInterface: QuotesRootView,
+                retrieveQuotesFactory: RetrieveQuotesUseCaseFactory) {
         self.userInterface = userInterface
+        self.retrieveQuotesFactory = retrieveQuotesFactory
 
         super.init()
     }
@@ -22,5 +26,12 @@ public class QuotesViewController: NiblessViewController {
         super.loadView()
 
         self.view = self.userInterface
+    }
+
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let useCase = self.retrieveQuotesFactory.makeRetrieveQuotesUseCase()
+        useCase.start()
     }
 }

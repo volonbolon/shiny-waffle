@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MainUXResponder: class {
-    func retrieveRandomQuote()
+    func presentQuotes()
 }

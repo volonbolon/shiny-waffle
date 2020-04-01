@@ -16,5 +16,5 @@ public enum RemoteQuoteError: Error {
 public typealias QuoteRemoteAPICompletionHandler = (Either<RemoteQuoteError, Quote>) -> Void
 
 public protocol RemoteQuoteAPI {
-    func getQuotes(completionHandler: QuoteRemoteAPICompletionHandler)
+    func getQuotes(completionHandler: @escaping QuoteRemoteAPICompletionHandler)
 }

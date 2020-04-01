@@ -11,11 +11,11 @@ import Foundation
 public class MainViewModel {
     weak var uxResponder: MainUXResponder?
 
-    @IBAction func retrieveRandomQuote() {
-        self.uxResponder?.retrieveRandomQuote()
+    @IBAction func presentQuotes() {
+        self.uxResponder?.presentQuotes()
     }
 }
 
 extension Selector {
-    static let MainViewModelRetrieveRandomQuote = #selector(MainViewModel.retrieveRandomQuote)
+    static let MainViewModelRetrieveRandomQuote = #selector(MainViewModel.presentQuotes)
 }

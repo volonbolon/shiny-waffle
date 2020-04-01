@@ -30,7 +30,6 @@ public struct AppDependencyContainer {
             return self.makeQuotesViewController()
         }
         let mainViewController = MainViewController(userInterface: userInterface,
-                                                    retrieveQuotesUseCaseFactory: self,
                                                     quotesViewControllerFactory: quotesFactory)
         mainViewModel.uxResponder = mainViewController
 
@@ -39,15 +38,17 @@ public struct AppDependencyContainer {
 
     public func makeQuotesViewController() -> QuotesViewController {
         let userInterface = QuotesRootView(frame: .zero)
-        let viewController = QuotesViewController(userInterface: userInterface)
+        let viewController = QuotesViewController(userInterface: userInterface,
+                                                  retrieveQuotesFactory: self)
 
         return viewController
     }
 }
 
 extension AppDependencyContainer: RetrieveQuotesUseCaseFactory {
-    public func makeMainUseCase() -> UseCase {
-        let useCase = RetrieveQuotesUseCase()
+    public func makeRetrieveQuotesUseCase() -> UseCase {
+        let remoteAPI = self.makeRemoteAPI()
+        let useCase = RetrieveQuotesUseCase(remoteAPI: remoteAPI)
         return useCase
     }
 }
