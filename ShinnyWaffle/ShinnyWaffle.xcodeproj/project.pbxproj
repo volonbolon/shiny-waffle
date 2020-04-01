@@ -19,6 +19,8 @@
 		79F1FB7424351DF900895AF6 /* ShinnyWaffleUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F1FB6424351DF900895AF6 /* ShinnyWaffleUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79F1FB7724351DF900895AF6 /* ShinnyWaffleUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F1FB6224351DF900895AF6 /* ShinnyWaffleUIKit.framework */; };
 		79F1FB7824351DF900895AF6 /* ShinnyWaffleUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79F1FB6224351DF900895AF6 /* ShinnyWaffleUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79F1FB8324351E3500895AF6 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FB8224351E3500895AF6 /* NiblessViewController.swift */; };
+		79F1FB8524351E4E00895AF6 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F1FB8424351E4E00895AF6 /* NiblessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		79F1FB6A24351DF900895AF6 /* ShinnyWaffleUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShinnyWaffleUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F1FB7124351DF900895AF6 /* ShinnyWaffleUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShinnyWaffleUIKitTests.swift; sourceTree = "<group>"; };
 		79F1FB7324351DF900895AF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79F1FB8224351E3500895AF6 /* NiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
+		79F1FB8424351E4E00895AF6 /* NiblessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 		79F1FB6324351DF900895AF6 /* ShinnyWaffleUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				79F1FB8024351E1600895AF6 /* Reusable */,
 				79F1FB6424351DF900895AF6 /* ShinnyWaffleUIKit.h */,
 				79F1FB6524351DF900895AF6 /* Info.plist */,
 			);
@@ -181,6 +186,23 @@
 				79F1FB7324351DF900895AF6 /* Info.plist */,
 			);
 			path = ShinnyWaffleUIKitTests;
+			sourceTree = "<group>";
+		};
+		79F1FB8024351E1600895AF6 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				79F1FB8124351E1C00895AF6 /* Nibless Components */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		79F1FB8124351E1C00895AF6 /* Nibless Components */ = {
+			isa = PBXGroup;
+			children = (
+				79F1FB8224351E3500895AF6 /* NiblessViewController.swift */,
+				79F1FB8424351E4E00895AF6 /* NiblessView.swift */,
+			);
+			path = "Nibless Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +312,7 @@
 					};
 					79F1FB6124351DF900895AF6 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 					79F1FB6924351DF900895AF6 = {
 						CreatedOnToolsVersion = 11.4;
@@ -375,6 +398,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F1FB8324351E3500895AF6 /* NiblessViewController.swift in Sources */,
+				79F1FB8524351E4E00895AF6 /* NiblessView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +573,7 @@
 		79F1FB0A24351C0800895AF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N376JP4MK;
@@ -566,6 +592,7 @@
 		79F1FB0B24351C0800895AF6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N376JP4MK;
@@ -628,6 +655,7 @@
 		79F1FB7A24351DF900895AF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -645,6 +673,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Volonbolon.ShinnyWaffleUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -655,6 +684,7 @@
 		79F1FB7B24351DF900895AF6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
